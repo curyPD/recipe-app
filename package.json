@@ -1,0 +1,25 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "description": "A web app for searching recipes online",
+  "default": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curyPD/recipe-app.git"
+  },
+  "author": "curypd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curyPD/recipe-app/issues"
+  },
+  "homepage": "https://github.com/curyPD/recipe-app#readme",
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  }
+}

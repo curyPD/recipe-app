@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/queries.css" />
+
+    <title>Recipe App</title>
+
+    <script defer type="module" src="src/js/controller.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">cookit</div>
+
+        <form class="form">
+          <input
+            class="input"
+            type="text"
+            placeholder="Search thousands of recipes"
+          />
+          <button class="btn btn--search">
+            Search
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="form__icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </form>
+        <div class="bookmarks-box">
+          <p class="bookmarks">Bookmarks</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="bookmarks__icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+            />
+          </svg>
+        </div>
+      </header>
+      <aside class="search-results">
+        <ul class="search-results__list">
+          <li class="search-results__item" data-recipe-id="">
+            <img
+              src="src/anh-nguyen-kcA-c3f_3FE-unsplash.jpg"
+              alt=""
+              class="search-results__img"
+            />
+            <div class="search-results__content">
+              <p class="search-results__title">Super Salad</p>
+              <p class="search-results__author">BBQ Cooking</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="pagination">
+          <button class="btn btn--pagination">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="pagination__icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Page 1
+          </button>
+          <button class="btn btn--pagination">
+            Page 3
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="pagination__icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <p class="copyright">
+          &copy; Copyright by CuryPD. All rights reserved.
+        </p>
+      </aside>
+      <main class="main">
+        <section class="recipe">
+          <div class="recipe__img-box">
+            <img
+              src="src/anh-nguyen-kcA-c3f_3FE-unsplash.jpg"
+              alt="food"
+              class="recipe__img"
+            />
+            <button class="btn btn--round btn--add-bookmark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="recipe__content-box">
+            <h1 class="recipe__title">Super Salad</h1>
+
+            <div class="recipe__ingredients">
+              <h3 class="recipe__heading">Ingredients</h3>
+              <ul class="ingredients__list">
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 1</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 2</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 3</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 4</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 5</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 6</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 7</span>
+                </li>
+                <li class="ingredients__item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="bullet-point"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="quantity">200 g</span>
+                  <span class="ingredient">ingredient number 8</span>
+                </li>
+              </ul>
+            </div>
+            <footer class="recipe__footer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p><span class="cooking-time">45</span> min</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+              <p><span class="servings">4</span> servings</p>
+              <div class="btns-change-servings-box">
+                <button class="btn btn--icon btn--change-servings">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+                <button class="btn btn--icon btn--change-servings">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </footer>
+          </div>
+        </section>
+        <section class="cta">
+          <h2 class="cta__heading">
+            This recipe was lovingly created by
+            <a href="#" class="author">BBQ Recipes</a>. See further directions
+            on their website
+          </h2>
+          <button class="btn btn--big">Directions</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
