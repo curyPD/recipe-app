@@ -6,6 +6,10 @@
   .search-results__title {
     max-width: 17rem;
   }
+
+  .bookmarks {
+    width: 32rem;
+  }
 }
 
 @media screen and (max-width: 75em) {
@@ -23,12 +27,14 @@
 
   .recipe__heading {
     font-size: 1.8rem;
+  }
 
-    /* margin-bottom: 1.6rem; */
+  .recipe__img-box {
+    flex: 4;
   }
 
   .recipe__content-box {
-    flex: 1;
+    flex: 5;
   }
 
   .ingredients__list {
@@ -69,8 +75,8 @@
     gap: 1.6rem;
   }
 
-  .search-results__img {
-    width: 4rem;
+  .search-results__img-box {
+    flex: 0 0 4rem;
     height: 4rem;
   }
 
@@ -84,6 +90,10 @@
 
   .container {
     grid-template-columns: 28rem 1fr;
+  }
+
+  .bookmarks {
+    width: 28rem;
   }
 
   .search-results__title {
@@ -101,5 +111,128 @@
   .footer__icon {
     width: 2.4rem;
     height: 2.4rem;
+  }
+
+  .bookmarks__text {
+    font-size: 1.4rem;
+  }
+
+  .bookmarks__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .btn--pagination {
+    gap: 0.4rem;
+    padding: 0.4rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .pagination__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 38.75em) {
+  .header {
+    padding: 0 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .input {
+    padding: 0.4rem 3.2rem 0.4rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .btn--search span {
+    display: none;
+  }
+
+  .bookmarks__text {
+    display: none;
+  }
+
+  .btn--search {
+    font-size: 1.2rem;
+  }
+
+  .form__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .input::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .search-results__item {
+    padding: 0.8rem 1.2rem;
+    gap: 1.2rem;
+  }
+
+  .cta {
+    padding: 0;
+  }
+
+  .cta__heading {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  .main {
+    grid-column: 1 / -1;
+    padding: 1.8rem 3.2rem;
+  }
+
+  .search-results {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid var(--primary-color-light-8);
+    width: 25rem;
+    z-index: 100;
+    transition: transform 0.3s ease-out;
+  }
+
+  .search-results.sidebar-visible {
+    transform: translateX(0);
+  }
+
+  .search-results__list {
+    overflow-y: scroll;
+  }
+
+  .box-open-sidebar {
+    display: block;
+  }
+
+  .message {
+    padding: 2.4rem;
+  }
+
+  .message__icon,
+  .error-message__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--primary-color);
+  }
+
+  .message__text,
+  .error-message__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--grey-color-light-1);
+    line-height: 1.5;
   }
 }
