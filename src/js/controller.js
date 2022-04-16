@@ -3,6 +3,8 @@ import SearchView from './views/searchView.js';
 import ResultsView from './views/resultsView.js';
 import RecipeView from './views/recipeView.js';
 import BookmarksView from './views/bookmarksView.js';
+import 'core-js/actual';
+import 'regenerator-runtime';
 
 const controlSearchResults = async function (e) {
   try {

@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "homepage": "https://github.com/curyPD/recipe-app#readme",
   "devDependencies": {
     "parcel": "^2.4.1"
+  },
+  "dependencies": {
+    "core-js": "^3.22.0",
+    "regenerator-runtime": "^0.13.9"
   }
 }
