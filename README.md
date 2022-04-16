@@ -1,3 +1,3 @@
 # Recipe App
 
-A web app for searching recipes online
+Search for thousands of recipes with cookit. Have fun cooking
