@@ -7,11 +7,13 @@ class BookmarksView extends View {
   constructor() {
     super();
 
-    this._parent
-      .closest('.bookmarks-box')
-      .addEventListener('mouseenter', function () {
-        this.querySelector('.bookmarks').classList.remove('transparent');
-      });
+    ['mouseenter', 'click'].forEach(event => {
+      this._parent
+        .closest('.bookmarks-box')
+        .addEventListener(event, function () {
+          this.querySelector('.bookmarks').classList.remove('transparent');
+        });
+    });
 
     this._parent
       .closest('.bookmarks-box')
