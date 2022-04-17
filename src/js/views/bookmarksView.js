@@ -15,11 +15,18 @@ class BookmarksView extends View {
         });
     });
 
+    document.addEventListener('click', this._hideBookmarks.bind(this));
+
     this._parent
       .closest('.bookmarks-box')
       .addEventListener('mouseleave', function () {
         this.querySelector('.bookmarks').classList.add('transparent');
       });
+  }
+
+  _hideBookmarks(e) {
+    if (e.target === this._parent.closest('.bookmarks-box')) return;
+    this._parent.classList.add('transparent');
   }
 
   _generateMarkup() {
